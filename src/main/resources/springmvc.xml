@@ -17,5 +17,12 @@
 
     <!--配置springmvc注解驱动，自动注册合适的组件handlerMapping和handlerAdapter-->
     <mvc:annotation-driven/>
+    
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/account/queryAll"/>
+            <bean class="com.lagou.edu.interceptor.Myinterceptor1"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

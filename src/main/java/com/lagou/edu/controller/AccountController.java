@@ -30,4 +30,10 @@ public class AccountController {
         return accountService.queryAccountList(account);
     }
 
+    @RequestMapping("/test")
+    @ResponseBody
+    public String  test(){
+        return "test";
+    }
+
 }
